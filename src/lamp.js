@@ -18,7 +18,9 @@ function makeLampStatusJson(command){
 function turnLamp(command){
 
 	let json = makeLampStatusJson(command);
-	
+        
+	console.log("We are sending this json to orion" + json);
+
 	// Orionにポストリクエストを送る
 	axios.patch('http://orion:1026', {
 		json
